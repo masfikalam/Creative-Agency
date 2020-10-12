@@ -1,0 +1,21 @@
+header {
+    background: linear-gradient(175deg, #fbd062 70%, white 70%);
+    min-height: 780px;
+    margin-bottom: -100px;
+}
+header img:hover {
+    transform: scale(0.9);
+    transition: 0.5s ease;
+}
+@media(max-width: 990px) {
+    header {
+        min-height: 700px;
+        margin-bottom: -150px;
+    }
+}
+@media(max-width: 770px) {
+    header {
+        min-height: 1000px;
+        margin-bottom: -200px;
+    }
+}

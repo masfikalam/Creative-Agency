@@ -1,0 +1,16 @@
+section#works {
+    background-color: #111430;
+}
+#works .carousel-item {
+    max-width: 600px;
+    display: none;
+    max-height: 450px;
+    float: none;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 20px;
+}
+#works .carousel-item.active {
+    display: block;
+}

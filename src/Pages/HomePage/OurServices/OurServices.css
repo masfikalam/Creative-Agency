@@ -1,0 +1,8 @@
+#services .serviceCard:hover {
+    border-radius: 20px;
+    box-shadow: 0 0 30px 0 #dbdbdb;
+}
+#services .serviceCard:hover img.icon {
+    transform: rotate(720deg);
+    transition: 1s ease;
+}
