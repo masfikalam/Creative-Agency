@@ -24,7 +24,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/login" component={LoginPage} />
-          <PrivateRoute path="/customer/:selectedService">
+          <PrivateRoute path="/dashboard/:selectedService">
             <CustomerPage />
           </PrivateRoute>
         </Switch>

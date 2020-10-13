@@ -29,7 +29,7 @@ const Navbar = () => {
                         <li className="nav-item mx-2">
                         {
                             user.signed ?
-                            <Link to="/customer" className="nav-link btn btn-dark text-white px-3">{user.name}</Link> :
+                            <h5 className="nav-link text-dark"><b>{user.name}</b></h5> :
                             <Link to="/login" className="nav-link btn btn-dark text-white px-3">Login</Link>
                         }
                             
