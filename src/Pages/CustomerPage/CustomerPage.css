@@ -1,0 +1,10 @@
+#customer #order input::file-selector-button {
+    height: 35px;
+    border-radius: 10px;
+    border: 2px solid #009444;
+    cursor: pointer;
+    background-color: #deffed;
+}
+#customer .right {
+    min-height: 90vh;
+}

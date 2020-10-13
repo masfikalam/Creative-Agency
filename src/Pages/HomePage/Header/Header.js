@@ -12,7 +12,7 @@ const Header = () => {
                     <div className="col-md-5 mb-5 mb-md-0">
                         <h1><b>Let's Grow Your Brand To The Next Level</b></h1>
                         <p className="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit voluptas cum odio accusamus vitae quo, magni eligendi inventore at ipsa enim corporis.</p>
-                        <button className="btn btn-dark px-5">Hire us</button>
+                        <a href="#services" className="btn btn-dark px-5">Hire us</a>
                     </div>
                     <div className="col-md-7">
                         <img src={workers} alt="" className="w-100" />

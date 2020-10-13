@@ -25,12 +25,14 @@ const OurWorks = () => {
                         <img src={image5} className="d-block w-100" alt="..." />
                         </div>
                     </div>
-                    <a href="#carouselExampleControls" role="button" data-slide="prev">
-                        <span className="btn btn-primary" aria-hidden="true">Previous</span>
-                    </a>
-                    <a href="#carouselExampleControls" role="button" data-slide="next">
-                        <span className="btn btn-primary float-right" aria-hidden="true">Next</span>
-                    </a>
+                    <div className="text-center">
+                        <a href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span className="btn btn-primary mx-3" aria-hidden="true">Previous</span>
+                        </a>
+                        <a href="#carouselExampleControls" role="button" data-slide="next">
+                            <span className="btn btn-primary mx-3" aria-hidden="true">Next</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

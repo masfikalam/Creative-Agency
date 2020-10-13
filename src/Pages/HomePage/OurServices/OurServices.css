@@ -3,6 +3,6 @@
     box-shadow: 0 0 30px 0 #dbdbdb;
 }
 #services .serviceCard:hover img.icon {
-    transform: rotate(720deg);
+    transform: rotate(360deg);
     transition: 1s ease;
 }

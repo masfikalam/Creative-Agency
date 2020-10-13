@@ -3,10 +3,6 @@ header {
     min-height: 780px;
     margin-bottom: -100px;
 }
-header img:hover {
-    transform: scale(0.9);
-    transition: 0.5s ease;
-}
 @media(max-width: 990px) {
     header {
         min-height: 700px;
