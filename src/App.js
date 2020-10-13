@@ -24,9 +24,9 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/login" component={LoginPage} />
-          <Route path="/customer">
+          <PrivateRoute path="/customer/:selectedService">
             <CustomerPage />
-          </Route>
+          </PrivateRoute>
         </Switch>
       </Router>
     </UserContext.Provider>
