@@ -1,16 +1,26 @@
-import React from 'react';
-import { useState } from 'react';
-import { useContext } from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
 import logo from '../../Images/logo.png';
-import './CustomerPage.css';
+import AllOrders from './AllOrders/AllOrders'
 import Order from './Order/Order';
-import Sidebar from './Sidebar';
+import Sidebar from './Sidebar/Sidebar';
+import './CustomerPage.css';
 
 const CustomerPage = () => {
     const [user] = useContext(UserContext);
-    const [display, setDisplay] = useState(<Order />)
+    const [isAdmin, setIsAdmin] = useState(false);
+    const [display, setDisplay] = useState(null);
+
+    // check for admin
+    useEffect(() => {
+        fetch(`http://localhost:5000/checkAdmin/${user.email}`)
+        .then(res => res.json())
+        .then(data => {
+            setIsAdmin(data);
+            data ? setDisplay(<AllOrders />) : setDisplay(<Order />)
+        })
+    }, [user.email])
 
     return (
         <section id="customer">
@@ -22,7 +32,7 @@ const CustomerPage = () => {
             </div>
             <div className="row">
                 <div className="col-md-3">
-                    <Sidebar setDisplay={setDisplay} />
+                    <Sidebar isAdmin={isAdmin} setDisplay={setDisplay} />
                 </div>
                 <div className="col-md-9 right bg-light">
                     {display}

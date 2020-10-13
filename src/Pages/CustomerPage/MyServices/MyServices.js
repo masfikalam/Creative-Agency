@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../../App';
-import service1 from '../../../Images/service1.png';
 
 const MyServices = () => {
     const [user] = useContext(UserContext);
@@ -26,10 +25,10 @@ const MyServices = () => {
                         <div key={order._id} className="col-md-5 my-3">
                             <div className="bg-white h-100 rounded p-3">
                                 <div className="d-flex mb-3 justify-content-between">
-                                        <img src={service1} alt="" width="60px" />
-                                        <h5 className="text-primary mt-3">{order.status}</h5>
+                                    <h4>{order.service}</h4>
+                                    <h5 className="text-primary">{order.status}</h5>
                                 </div>
-                                <h4><b>{order.name}</b></h4>
+                                <h5>Ordered By: <b>{order.name}</b></h5>
                                 <p>{order.description}</p>
                             </div>
                         </div>)

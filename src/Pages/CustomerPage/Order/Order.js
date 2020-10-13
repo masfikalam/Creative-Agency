@@ -9,7 +9,7 @@ const Order = () => {
     const [user] = useContext(UserContext);
     const [newOrder, setNewOrder] = useState({});
 
-    // handling blue
+    // handling blur
     function handleBlur(e) {
         const optOrder = {...newOrder};
         optOrder[e.target.name] = e.target.value;
