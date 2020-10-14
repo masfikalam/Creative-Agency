@@ -23,7 +23,7 @@ const Order = () => {
     function addOrder(e) {
         e.preventDefault();
         
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://immense-wildwood-27777.herokuapp.com/addOrder', {
             method: 'POST',
             headers: {'Content-type':'application/json'},
             body: JSON.stringify(newOrder)

@@ -7,7 +7,7 @@ const Review = () => {
 
     // loading all reviews
     useEffect(() => {
-        fetch('http://localhost:5000/allReviews')
+        fetch('https://immense-wildwood-27777.herokuapp.com/allReviews')
         .then(res => res.json())
         .then(data => setAllReviews(data))
     },[])
@@ -16,6 +16,12 @@ const Review = () => {
         <section id="services">
             <div className="container py-5 my-md-5 text-center">
                 <h2>Our Client's <b style={{color: '#7ab259'}}>Feedback</b></h2>
+
+                {
+                    allReviews.length === 0 &&
+                    <h4 className="my-4 text-center text-danger">Loading Reviews....</h4>
+                }
+
                 <div className="row mt-5">
                     {
                         allReviews.map(review => 

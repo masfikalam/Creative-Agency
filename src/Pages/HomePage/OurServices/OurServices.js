@@ -7,7 +7,7 @@ const OurServices = () => {
 
     // loading services
     useEffect(() => {
-        fetch('http://localhost:5000/allServices')
+        fetch('https://immense-wildwood-27777.herokuapp.com/allServices')
         .then(res => res.json())
         .then(data => setAllServices(data))
     }, [])
@@ -16,6 +16,12 @@ const OurServices = () => {
         <section id="services">
             <div className="container py-5 mt-md-5 text-center">
                 <h2>We Provide Awesome <b style={{color: '#7ab259'}}>Services</b></h2>
+
+                {
+                    allServices.length === 0 &&
+                    <h4 className="my-4 text-center text-danger">Loading Services....</h4>
+                }
+                
                 <div className="row mt-5">
                     {
                         allServices.map(service => 
