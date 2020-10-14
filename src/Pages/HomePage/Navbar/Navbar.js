@@ -1,10 +1,20 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import logo from '../../../Images/logo.png';
 
 const Navbar = () => {
     const [user] = useContext(UserContext);
+    const [admin, setAdmin] = useState(false);
+
+    // check for admin
+    useEffect(() => {
+        fetch(`http://localhost:5000/checkAdmin/${user.email}`)
+        .then(res => res.json())
+        .then(data => {
+            setAdmin(data);
+        })
+    }, [user.email])
 
     return (
         <nav className="navbar navbar-expand-md navbar-light">
@@ -28,11 +38,17 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item mx-2">
                         {
-                            user.signed ?
-                            <h5 className="nav-link text-dark"><b>{user.name}</b></h5> :
+                            !user.signed &&
                             <Link to="/login" className="nav-link btn btn-dark text-white px-3">Login</Link>
+                        }  
+                        {
+                            user.signed && admin &&
+                            <Link to="/dashboard/admin" className="nav-link btn btn-dark text-white px-3">Dashboard</Link>
+                        }  
+                        {
+                            user.signed && !admin &&
+                            <h5 className="nav-link"><b>{user.name}</b></h5>
                         }
-                            
                         </li>
                     </ul>
                 </div>

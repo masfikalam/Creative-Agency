@@ -5,9 +5,9 @@ import logo from '../../Images/logo.png';
 import AllOrders from './AllOrders/AllOrders'
 import Order from './Order/Order';
 import Sidebar from './Sidebar/Sidebar';
-import './CustomerPage.css';
+import './Dashboard.css';
 
-const CustomerPage = () => {
+const Dashboard = () => {
     const [user] = useContext(UserContext);
     const [isAdmin, setIsAdmin] = useState(false);
     const [display, setDisplay] = useState(null);
@@ -42,4 +42,4 @@ const CustomerPage = () => {
     );
 };
 
-export default CustomerPage;
+export default Dashboard;

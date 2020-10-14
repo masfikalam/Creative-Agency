@@ -3,7 +3,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './Pages/HomePage/HomePage';
 import LoginPage from './Pages/LoginPage/LoginPage';
-import CustomerPage from './Pages/CustomerPage/CustomerPage';
+import Dashboard from './Pages/Dashboard/Dashboard';
 import PrivateRoute from './Pages/LoginPage/PrivateRoute';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 export const UserContext = createContext();
@@ -25,7 +25,7 @@ function App() {
           <Route path="/" exact component={HomePage} />
           <Route path="/login" component={LoginPage} />
           <PrivateRoute path="/dashboard/:selectedService">
-            <CustomerPage />
+            <Dashboard />
           </PrivateRoute>
         </Switch>
       </Router>
