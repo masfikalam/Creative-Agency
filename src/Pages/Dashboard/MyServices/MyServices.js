@@ -1,14 +1,11 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
-import { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../../../App';
 
 const MyServices = () => {
     const [user] = useContext(UserContext);
     const [myOrders, setMyOrders] = useState([]);
 
-    // loading user's services
+    // loading user's orders
     useEffect(() => {
         fetch(`https://immense-wildwood-27777.herokuapp.com/allOrders/${user.email}`)
         .then(res => res.json())

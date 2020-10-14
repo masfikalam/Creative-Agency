@@ -17,7 +17,7 @@ const Contact = () => {
                         <button className="btn btn-lg btn-dark px-5">Send</button>
                     </div>
                 </div>
-                <h6 className="text-center mt-5 pb-3 mb-0">Copyright &copy; 2020</h6>
+                <h6 className="text-center mt-5 pb-3 mb-0">Copyright &copy; {(new Date()).getFullYear()}</h6>
             </div>
         </section>
     );

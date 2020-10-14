@@ -1,6 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Review = () => {
     const [allReviews, setAllReviews] = useState([]);
@@ -29,7 +27,7 @@ const Review = () => {
                             <div className="py-3 px-4 border rounded h-100">
                                 <div className="row text-left">
                                     <div className="col-4">
-                                        <img src={review.photo} alt="" width="70px" />
+                                        <img src={review.photo} className="rounded" alt="" width="70px" />
                                     </div>
                                     <div className="col-8">
                                         <h4><b>{review.name}</b></h4>
@@ -40,7 +38,6 @@ const Review = () => {
                             </div>
                         </div>)
                     }
-                    
                 </div>
             </div>
         </section>

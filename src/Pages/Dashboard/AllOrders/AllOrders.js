@@ -4,9 +4,9 @@ import { UserContext } from '../../../App';
 const AllOrders = () => {
     const [user] = useContext(UserContext);
     const [allOrders, setAllOrders] = useState([]);
-    const statuses = ['Pending', 'Processing', 'Done']
+    const statuses = ['Pending', 'Processing', 'Done'];
     
-    // adding new order
+    // loading all orders
     useEffect(() => {
         fetch('https://immense-wildwood-27777.herokuapp.com/allOrders')
         .then(res => res.json())

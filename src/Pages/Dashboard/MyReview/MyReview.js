@@ -10,7 +10,7 @@ const MyReview = () => {
         const optReview = {...newReview};
         optReview[e.target.name] = e.target.value;
         optReview.photo = user.photo;
-        setNewReview(optReview)
+        setNewReview(optReview);
     }
     
     // adding new order

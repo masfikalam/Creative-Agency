@@ -1,4 +1,3 @@
 section#companies img:hover {
-    transform: rotate(360deg);
-    transition: 1s ease;
+    filter: saturate(50)
 }

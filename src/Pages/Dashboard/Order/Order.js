@@ -1,6 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
-import { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { UserContext } from '../../../App';
 
