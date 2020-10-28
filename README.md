@@ -11,8 +11,8 @@ This is a full stack application of a software service agency
 * Admins can also add new services which will be displayed and accessible to the customers.
 * Admin can make other users admin by giving their email.
 
+Technology : React, React Router, Bootstrap, MongoDB, Node js, Express js, Heroku, Firebase
+
 * [Live Site](https://creative-agency-limited.web.app/)
 * [Client Code](https://github.com/masfikalam/Creative-Agency)
 * [Server Code](https://github.com/masfikalam/Creative-Agency-Server)
-
-Technology : React, React Router, Bootstrap, MongoDB, Node js, Express js, Heroku, Firebase
