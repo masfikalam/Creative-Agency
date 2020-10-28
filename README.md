@@ -1,5 +1,7 @@
 # Creative Agency
 
+This is a full stack application of a software service agency
+
 * It's homepage has a header section, services, portfolio, reviews and contact section.
 * A customer can choose any service from them and order services by logging in with Google.
 * Customers can also see their previous orders and their status.
@@ -9,8 +11,8 @@
 * Admins can also add new services which will be displayed and accessible to the customers.
 * Admin can make other users admin by giving their email.
 
-[Live Site](https://creative-agency-limited.web.app/)
-[Client Code](https://github.com/masfikalam/Creative-Agency)
-[Server Code](https://github.com/masfikalam/Creative-Agency-Server)
+* [Live Site](https://creative-agency-limited.web.app/)
+* [Client Code](https://github.com/masfikalam/Creative-Agency)
+* [Server Code](https://github.com/masfikalam/Creative-Agency-Server)
 
 Technology : React, React Router, Bootstrap, MongoDB, Node js, Express js, Heroku, Firebase
